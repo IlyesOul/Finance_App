@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bad1208b-a62f-4dc8-9411-a43b66f11d8f" name="Changes" comment="" />
+    <list default="true" id="bad1208b-a62f-4dc8-9411-a43b66f11d8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Pattern_Analyzer/data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pattern_Analyzer/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pattern_Analyzer/moving_average.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pattern_Analyzer/recursive_analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Volatility_Analysis/central_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Volatility_Analysis/central_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Volatility_Analysis/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Volatility_Analysis/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Volatility_Analysis/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Volatility_Analysis/data.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,9 +41,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Backup_Folder/Finance_App"
+    "last_opened_file_path": "C:/Users/Backup_Folder/Inde_Study"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Backup_Folder\Finance_App\Volatility_Analysis" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
