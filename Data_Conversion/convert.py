@@ -35,7 +35,7 @@ class converter:
 
         # Retrieving timestamps
         for item in self.r_json.get("chart").get("result")[0].get("timestamp"):
-             full_values["timestamps"].append(item)
+            full_values["timestamps"].append(item)
 
         # Filling the full_values dictionary with appropriate values
         for index in range(len(all_results.get("low"))):
@@ -60,6 +60,19 @@ class converter:
             for index in range(len(final_arr)):
                 csvwriter.writerow(final_arr[index])
 
+    # Returns list of values of specified feature
+    def get_feature_values(self, feature):
+        # All JSON results
+        all_results = self.r_json.get("chart").get("result")[0].get("indicators").get("quote")[0]
+
+        # Values of specified values
+        final_values = []
+        for index in range(len(all_results.get("low"))):
+            for curr_row in all_results:
+                if curr_row == feature:
+                    final_values.append(all_results.get(curr_row)[index])
+        return final_values
+
     # Returns valid window ranges
     def get_valid_dates(self):
         dates = []
@@ -69,7 +82,3 @@ class converter:
             dates.append(date)
 
         return dates
-
-
-# conv = converter('https://query1.finance.yahoo.com/v8/finance/chart/xom?period1=915166800&period2=1041397200&interval=1mo&includeAdjustedClose=false')
-# conv.write_to_file('data.json', 'data.csv')

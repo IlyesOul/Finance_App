@@ -34,9 +34,9 @@ class analyzer:
         self.aux_list = local_extrema
 
 
-converts = convert.converter('https://query1.finance.yahoo.com/v8/finance/chart/aapl?period1=978325200&period2=1672549200&interval=1mo&includeAdjustedClose=false')
-data = pd.read_csv('data.csv')
-arr = np.array(data["Close"])
-analyze = analyzer(arr, 0, len(arr))
-analyze.return_patterns()
-print(analyze.aux_list)
+# converts = convert.converter('https://query1.finance.yahoo.com/v8/finance/chart/aapl?period1=978325200&period2=1672549200&interval=1mo&includeAdjustedClose=false')
+# data = pd.read_csv('data.csv')
+# arr = np.array(data["Close"])
+# analyze = analyzer(arr, 0, len(arr))
+# analyze.return_patterns()
+# print(analyze.aux_list)
