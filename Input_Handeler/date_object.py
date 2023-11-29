@@ -1,6 +1,5 @@
 import datetime
 
-
 class input_handler:
 
 	# Constructor
@@ -9,6 +8,9 @@ class input_handler:
 		self.day = 0
 		self.month = 0
 		self.year = 0
+		
+		# Converter object
+		
 
 	# Prompts user for date-values
 	def prompt_date(self):
