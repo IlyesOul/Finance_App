@@ -4,12 +4,14 @@ from Data_Conversion import convert
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from Input_Handeler import date_object
 
 # File is filled with appropriate data
-url = "https://query1.finance.yahoo.com/v8/finance/chart/googl?period1=1167627600&period2=1672549200&" \
-      "interval=1d&includeAdjustedClose=false"
-converter_object = convert.converter(url)
-converter_object.write_to_file("training.json", "aux_file.csv")
+# Initialize JSON query link and create converter-object with it
+initialized_url = date_object.input_handler().initialize_url()
+converter = convert.converter(initialized_url)
+
+converter.write_to_file("training.json", "aux_file.csv")
 
 
 data = []

@@ -2,8 +2,6 @@ import requests
 import re
 from bs4 import BeautifulSoup
 import yfinance as yf
-import openai
-import langchain
 
 
 # Return a prepared URL for site-scrapping
@@ -68,4 +66,4 @@ def experimental(ticker):
 
 comp_ticker = input("What is your ticker? ")
 print(f"Stock News: {get_recent_stock_news(company_name=comp_ticker)}")
-experimental(comp_ticker)
+# experimental(comp_ticker)
