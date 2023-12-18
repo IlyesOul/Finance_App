@@ -5,7 +5,7 @@ import numpy as np
 import requests
 import numbers
 from sklearn.linear_model import LinearRegression
-from Input_Handeler import date_object
+import datetime
 
 
 class economy_correlations:
@@ -14,7 +14,15 @@ class economy_correlations:
 	def __init__(self):
 		print("Start date MUST be Jan 1st 2007")
 		# Initialize JSON query link and create converter-object with it
-		initialized_url = date_object.input_handler().initialize_url()
+		date = datetime.datetime(2007, 1, 1)
+		unix_timestamp_1 = datetime.datetime.timestamp(date)
+		date = datetime.datetime(2022, 12, 1)
+		unix_timestamp_2 = datetime.datetime.timestamp(date)
+		print()
+		print()
+		stock_name = input("What is the ticker of the desired stock?")
+		initialized_url = f"https://query1.finance.yahoo.com/v8/finance/chart/{stock_name.lower()}?period1={str(int(unix_timestamp_1))}&period2={str(int(unix_timestamp_2))}&interval=1d&includeAdjustedClose=false"
+		print(initialized_url)
 		self.converter = convert.converter(initialized_url)
 		self.converter.write_to_file('training.json', 'training.csv')
 
@@ -84,8 +92,7 @@ class economy_correlations:
 
 		# Attain training and testing data
 		data = pd.read_csv('national_factors.csv')
-
-		x = np.array(data.drop(["Open"]))
+		x = np.array(data.drop(["Open"], 1))
 		y = np.array(data["Open"])
 
 		# Train-test data split
