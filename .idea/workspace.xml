@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bad1208b-a62f-4dc8-9411-a43b66f11d8f" name="Changes" comment="Created trends and in-depth analysis">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Input_Handeler/date_object.py" beforeDir="false" afterPath="$PROJECT_DIR$/Input_Handeler/date_object.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/aux_file.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/aux_file.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/national_factors.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/national_factors.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/national_values.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/national_values.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/predicting_prices.py" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/predicting_prices.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/training.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/training.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/training.json" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/training.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Volatility_Analysis/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Volatility_Analysis/data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Volatility_Analysis/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Volatility_Analysis/data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experimental_programs/experimental.py" beforeDir="false" afterPath="$PROJECT_DIR$/experimental_programs/experimental.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
