@@ -1,10 +1,11 @@
 import csv
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.linear_model import LinearRegression
 from Data_Conversion import convert
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from Input_Handeler import date_object
+import datetime
 
 # File is filled with appropriate data
 # Initialize JSON query link and create converter-object with it
@@ -52,29 +53,34 @@ test_x = x[len(x)-50:]
 test_y = y[len(y)-50:]
 
 # Initialize pre-pruned Random Forest Ensemble
-forest = RandomForestRegressor(max_leaf_nodes=12, n_estimators=25, n_jobs=-1)
+forest = LinearRegression()
 
 # Train forest
 forest.fit(train_x, train_y)
 
 # Predicted values
 predicted_values = np.array(forest.predict(test_x))
-score = forest.score(test_x, test_y)
+print(f"Our horrid score is {forest.score(test_x, test_y)}")
 
 # Collect attribute data
 data = pd.read_csv("training.csv")
 dates = data["Timestamp"]
+dates_date = []
+
 data = data["Open"]
 values = []
 
 for val in data:
 	values.append(val)
 
-# Graph data
-plt.plot(dates, values, c='blue', label="Historical Value")
+for date in dates:
+	dates_date.append(datetime.datetime.fromtimestamp(date))
 
-dates = dates[len(x)-50:]
-plt.plot(dates, predicted_values, c="yellow", label="Predicted Value")
+# Graph data
+plt.plot(dates_date, values, c='blue', label="Historical Value")
+
+dates_date = dates_date[len(x)-50:]
+plt.plot(dates_date, predicted_values, c="yellow", label="Predicted Value")
 
 plt.title(f"Daily Open", fontsize=14)
 plt.xlabel("Dates", fontsize=15)
