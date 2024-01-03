@@ -4,6 +4,14 @@ from bs4 import BeautifulSoup
 import yfinance as yf
 
 
+# Retrieve name based on ticker
+def get_name(ticker):
+    url = f"https://api.polygon.io/v3/reference/tickers/{ticker.upper()}?apiKey=VFSwKNWbH7pv7Yp98ayguccA6KVAJYjr"
+    request_json = requests.get(url).json()
+
+    return request_json["results"]["name"]
+
+
 # Return a prepared URL for site-scrapping
 def google_query(search_term):
     if "news" not in search_term:
@@ -67,3 +75,4 @@ def experimental(ticker):
 comp_ticker = input("What is your ticker? ")
 print(f"Stock News: {get_recent_stock_news(company_name=comp_ticker)}")
 # experimental(comp_ticker)
+# print(get_name(comp_ticker))

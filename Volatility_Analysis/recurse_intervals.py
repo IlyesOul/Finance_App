@@ -1,4 +1,7 @@
 from standard_dev import standardDev
+import pandas as pd
+import numpy as np
+from Input_Handeler import date_object
 
 
 class recurse_interval:
@@ -39,7 +42,11 @@ class recurse_interval:
             return True
         return False
 
-# data = pd.read_csv('data.csv')
-# data = data["Close"]
-# col = np.array(data)
-# recurse_interval(col).call_recurse()
+
+data = pd.read_csv('data.csv')
+data = data["Close"]
+col = np.array(data)
+recurse_interval(col).call_recurse()
+
+grapher = date_object.input_handler()
+grapher.create_graph()

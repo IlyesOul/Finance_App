@@ -1,5 +1,7 @@
 import datetime
 from Data_Conversion import convert
+import pandas as pd
+import matplotlib.pyplot as plt
 
 
 class input_handler:
@@ -10,7 +12,6 @@ class input_handler:
 		self.day = 0
 		self.month = 0
 		self.year = 0
-		
 
 	# Prompts user for date-values
 	def prompt_date(self):
@@ -36,3 +37,27 @@ class input_handler:
 
 		return f'https://query1.finance.yahoo.com/v8/finance/chart/{name.lower()}?period1={unix_1}&period2={unix_2}&interval=1d&includeAdjustedClose=false'
 
+	# Graph a base JSON query
+	def create_graph(self):
+		converter = convert.converter(self.initialize_url())
+		converter.write_to_file('data.json', 'data.csv')
+
+		data = pd.read_csv("data.csv")
+		data = data["Close"]
+		values = []
+
+		for val in data:
+			values.append(val)
+
+		# Graph data
+
+		plt.plot(converter.get_valid_dates(), values, c='blue')
+
+		plt.title("Close - Daily", fontsize=14)
+		plt.xlabel("Dates", fontsize=15)
+
+		label = "$ USD"
+
+		plt.ylabel(label.upper(), fontsize=15)
+
+		plt.show()
